@@ -10,7 +10,7 @@ from src.config import RANDOM_STATE
 def build_models():
     models = {
         # Logistic Regression
-        "Logistic Regression" : LogisticRegression(random_state=RANDOM_STATE, max_iter=1000,class_weight="balanced"),
+        "Logistic Regression" : LogisticRegression(random_state=RANDOM_STATE, max_iter=1000,class_weight="balanced",C=10),
 
         # KNN
         "KNN" : KNeighborsClassifier(n_neighbors=5),
