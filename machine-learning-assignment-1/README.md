@@ -28,16 +28,14 @@ Validation set performance (imbalanced target, ~27% churn — F1 used for select
 
 | Model                | Accuracy | Precision | Recall | F1     |
 |-----------------------|----------|-----------|--------|--------|
-| **Logistic Regression** | 0.746    | 0.514     | 0.778  | **0.619** |
-| KNN                    | 0.769    | 0.568     | 0.545  | 0.557  |
-| Decision Tree          | 0.743    | 0.516     | 0.519  | 0.517  |
+| **Logistic Regression** | 0.744    | 0.512     | 0.778  | **0.618** |
+| KNN                    | 0.761    | 0.552     | 0.532  | 0.542  |
+| Decision Tree          | 0.734    | 0.500     | 0.519  | 0.503  |
 
 **Best model: Logistic Regression** (highest validation F1). It trades some
 precision for much higher recall — catching more true churners at the cost of
 more false alarms — which fits the retention use case, where missing an at-risk
 customer is costlier than an unnecessary outreach.
-
-![Confusion Matrix](figures/confusion_matrix.png)
 
 ## Key insights (EDA)
 
@@ -61,3 +59,6 @@ python main.py
 
 The script prints validation and final-test metrics and writes a confusion matrix
 to `figures/confusion_matrix.png`.
+
+
+[def]: figures/confusion_matrix.png
